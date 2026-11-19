@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Información</title>
+    <style>
+        body {
+            background-color: AntiqueWhite;
+        }
+        h1 {
+            font-size: 25px;
+            color: brown;
+            font-family: Arial, sans-serif;
+        }
+        label {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulario de Información</h1>
+
+    <form action="formulario.php" method="POST">
+        <fieldset>
+            <legend>Sus Datos</legend>
+
+            <p>
+                <label for="nombre">Nombre y apellidos:</label>
+                <input type="text" id="nombre" name="nombre" maxlength="50">
+            </p>
+
+    <p>
+        <label for="pass">Contraseña:</label>
+        <input type="password" id="pass" name="pass" maxlength="8">
+    </p>
+
+    <p>
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" value="anonimo" disabled>
+    </p>
+
+<p>
+    <label>Nivel:</label><br>
+    <input type="radio" id="prof" name="nivel" value="profesional">
+    <label for="prof">Profesional</label><br>
+
+    <input type="radio" id="avan" name="nivel" value="avanzado">
+    <label for="avan">Avanzado</label><br>
+
+    <input type="radio" id="prin" name="nivel" value="principiante">
+    <label for="prin">Principiante</label>
+</p>
+        </fieldset>
+
+        <p>
+            <label for="nacionalidad">Nacionalidad:</label>
+            <select id="nacionalidad" name="nacionalidad">
+                <option value="España" selected>España</option>
+                <option value="Francia">Francia</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Italia">Italia</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="4" cols="35"></textarea>
+        </p>
+
+        <p>
+            <input type="checkbox" id="deseo" name="deseo" checked>
+            <label for="deseo">Deseo recibir información sobre novedades y ofertas</label>
+        </p>
+
+        <p>
+            <input type="checkbox" id="condiciones" name="condiciones">
+            <label for="condiciones">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
+        </p>
+
+        <p>
+            <label for="foto">Adjuntar foto:</label>
+            <input type="file" id="foto" name="foto">
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar datos">
+        </p>
+    </form>
+
+</body>
+</html>
